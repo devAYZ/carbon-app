@@ -8,7 +8,7 @@ import Foundation
 import UIKit
 
 struct SlideContents {
-    let image: UIImage
+    let imageView: UIImage
     let title: String
     let body: String
     
@@ -16,3 +16,5 @@ struct SlideContents {
 //        .init(image: <#T##UIImage#>, title: <#T##String#>, body: <#T##String#>),
 //    ]
 }
+
+

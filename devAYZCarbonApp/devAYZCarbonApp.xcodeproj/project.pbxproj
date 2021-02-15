@@ -14,6 +14,7 @@
 		04672C8225D84F5D0037F4CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04672C8025D84F5D0037F4CA /* LaunchScreen.storyboard */; };
 		04672C9725DAE21E0037F4CA /* OnboardSlideContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672C9625DAE21E0037F4CA /* OnboardSlideContents.swift */; };
 		04672C9C25DB01210037F4CA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672C9B25DB01210037F4CA /* OnboardingViewController.swift */; };
+		04672CA525DB1A940037F4CA /* OnboardingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CA425DB1A940037F4CA /* OnboardingViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		04672C8325D84F5D0037F4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04672C9625DAE21E0037F4CA /* OnboardSlideContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSlideContents.swift; sourceTree = "<group>"; };
 		04672C9B25DB01210037F4CA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		04672CA425DB1A940037F4CA /* OnboardingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		04672C9425DAE1BB0037F4CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04672CA425DB1A940037F4CA /* OnboardingViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				04672C9C25DB01210037F4CA /* OnboardingViewController.swift in Sources */,
 				04672C7625D84F590037F4CA /* AppDelegate.swift in Sources */,
 				04672C7825D84F590037F4CA /* SceneDelegate.swift in Sources */,
+				04672CA525DB1A940037F4CA /* OnboardingViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
