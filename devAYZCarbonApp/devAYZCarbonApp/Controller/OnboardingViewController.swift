@@ -9,11 +9,7 @@ import UIKit
 
 class OnboardingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-//    let collectionView = UICollectionView()
-    
-    //    let celld = "cellId"
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -22,12 +18,14 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
 //        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
 //        layout.itemSize = CGSize(width: 60, height: 60)
         
-        let myCollectionView:UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        myCollectionView.dataSource = self
-        myCollectionView.delegate = self
-        myCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
-        myCollectionView.backgroundColor = UIColor.white
-        self.view.addSubview(myCollectionView)
+        let collectionView: UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
+        collectionView.backgroundColor = UIColor.white
+        collectionView.contentInsetAdjustmentBehavior = .never
+        collectionView.isPagingEnabled = true
+        self.view.addSubview(collectionView)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,6 +44,10 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
         let itemHeight = collectionView.bounds.height
         
         return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        0
     }
     
     
@@ -69,40 +71,10 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        view.backgroundColor = .red
-        
 
     }
     
     
-//    func setupCollectionView() -> UICollectionView{
-//
-//        let layout = UICollectionViewFlowLayout()
-//        layout.scrollDirection = .horizontal
-////        cv.backgroundColor = .white
-//        collectionView.collectionViewLayout = layout
-//        collectionView.dataSource = self
-//        collectionView.delegate = self
-//        collectionView.register(UICollectionView.self, forCellWithReuseIdentifier: "cellId")
-//        return collectionView
-//    }
-//
 
 }
 
-
-//extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        5
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-//
-//        cell.backgroundColor = .black
-//
-//        return cell
-//    }
-//
-//}
