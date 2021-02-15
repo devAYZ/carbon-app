@@ -12,20 +12,11 @@ class OnboardingViewCell: UICollectionViewCell {
         
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        contentView.backgroundColor = .systemBlue
-//        contentView.addSubview(imageView)
-//
         setupView()
     }
     
-    private var imageView: UIImageView = {
-        let myImageView = UIImageView()
-        myImageView.contentMode = .scaleAspectFit
-//        myImageView.image = #imageLiteral(resourceName: "atm")
-        myImageView.image = #imageLiteral(resourceName: "users")
-        
-        return myImageView
-    }()
+    lazy var imageView = UIImageView()
+    
     
     func setupView() {
         backgroundColor = .white
@@ -34,6 +25,13 @@ class OnboardingViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+    }
+    
+    
+    func configure(with slide: SlideContents) {
+        
+        imageView.image = slide.imageView
+        imageView.contentMode = .scaleAspectFit
         
         imageView.frame = CGRect(x: 20,
                                  y: contentView.frame.height / 20,

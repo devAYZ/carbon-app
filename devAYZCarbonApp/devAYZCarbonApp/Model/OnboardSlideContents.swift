@@ -9,12 +9,14 @@ import UIKit
 
 struct SlideContents {
     let imageView: UIImage
-    let title: String
-    let body: String
+//    let title: String
+//    let body: String
     
-//    static let collection: [SlideContents] = [
-//        .init(image: <#T##UIImage#>, title: <#T##String#>, body: <#T##String#>),
-//    ]
+    static let collection: [SlideContents] = [
+        .init(imageView: #imageLiteral(resourceName: "mobile2")),
+        .init(imageView: #imageLiteral(resourceName: "atm")),
+        .init(imageView: #imageLiteral(resourceName: "users"))
+    ]
 }
 
 

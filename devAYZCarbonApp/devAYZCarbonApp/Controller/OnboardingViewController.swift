@@ -9,6 +9,7 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
     
+    private let slides: [SlideContents] = SlideContents.collection
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -28,6 +29,7 @@ class OnboardingViewController: UIViewController {
 }
 
 extension OnboardingViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     
     func setupCollectionView(){
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -52,12 +54,13 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return slides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: OnboardingViewCell.identifier, for: indexPath)
-//        myCell.backgroundColor = UIColor.red
+        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: OnboardingViewCell.identifier, for: indexPath) as! OnboardingViewCell
+        let slide = slides[indexPath.item]
+        myCell.configure(with: slide)
         return myCell
     }
     
@@ -78,6 +81,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     {
         print("User tapped on item \(indexPath.row)")
     }
+    
     
     
 }
