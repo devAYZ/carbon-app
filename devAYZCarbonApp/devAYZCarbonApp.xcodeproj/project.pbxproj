@@ -16,6 +16,7 @@
 		04672C9C25DB01210037F4CA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672C9B25DB01210037F4CA /* OnboardingViewController.swift */; };
 		04672CA525DB1A940037F4CA /* OnboardingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CA425DB1A940037F4CA /* OnboardingViewCell.swift */; };
 		04672CAB25DBD2C20037F4CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CAA25DBD2C20037F4CA /* Constants.swift */; };
+		04672CD025DC539D0037F4CA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CCF25DC539D0037F4CA /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		04672C9B25DB01210037F4CA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		04672CA425DB1A940037F4CA /* OnboardingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewCell.swift; sourceTree = "<group>"; };
 		04672CAA25DBD2C20037F4CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04672CCF25DC539D0037F4CA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				04672C9B25DB01210037F4CA /* OnboardingViewController.swift */,
+				04672CCF25DC539D0037F4CA /* SignInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				04672C9725DAE21E0037F4CA /* OnboardSlideContents.swift in Sources */,
 				04672C9C25DB01210037F4CA /* OnboardingViewController.swift in Sources */,
 				04672C7625D84F590037F4CA /* AppDelegate.swift in Sources */,
+				04672CD025DC539D0037F4CA /* SignInViewController.swift in Sources */,
 				04672CAB25DBD2C20037F4CA /* Constants.swift in Sources */,
 				04672C7825D84F590037F4CA /* SceneDelegate.swift in Sources */,
 				04672CA525DB1A940037F4CA /* OnboardingViewCell.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
     
-    private let slides: [SlideContents] = SlideContents.collection
+    public let slides: [SlideContents] = SlideContents.collection
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -21,14 +21,16 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        view.backgroundColor = .purple
+        view.backgroundColor = .white
         setupCollectionView()
-        
     }
+    
+//    @objc func selectorX() { }
     
 }
 
 extension OnboardingViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     
     
     func setupCollectionView(){
@@ -42,18 +44,51 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.isPagingEnabled = true
         collectionView.frame = view.bounds
+        collectionView.backgroundColor = .systemPurple
         self.view.addSubview(collectionView)
         
         
-//        NSLayoutConstraint.activate([
-//            collectionView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-//            collectionView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-//            collectionView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-//            collectionView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
-//        ])
+//        let navLabel = UILabel(frame: CGRect(x: 0,y: 0, width: view.frame.width - 70, height: view.frame.height))
+//        navLabel.setTitle("Sign In", for: .normal)
+//        navLabel.setTitleColor( #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1), for: .normal)
+//        navLabel.isEnabled = true
+//
+//        navigationItem.titleView = navLabel.titleLabel
+//        var navLabelText = ""
+//        let slideC: SlideContents
+//        let slideCC = slideC.title
+//        if slideCC == "0" {
+//            navLabelText = "Skip"
+        //        }
         
-        navigationItem.title = "Home"
+        
+        let navLabel = UILabel(frame: CGRect(x: 0,y: 0, width: view.frame.width - 70, height: view.frame.height))
+        navLabel.text = "SignIn"
+        navLabel.textAlignment = .right
+        navLabel.textColor =  #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1)
+        // Enable User Interaction
+        navLabel.isUserInteractionEnabled = true
+        // Create and add the Gesture Recognizer
+        let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(signInClicked(_:)))
+        navLabel.addGestureRecognizer(guestureRecognizer)
+        
+        navigationItem.titleView = navLabel
+        
+        
+        
     }
+    
+    
+    @objc func signInClicked(_ sender: Any) {
+        //        print("Sign In clicked")
+        //this code will navigate to next view when you press button.
+        let signInVC = SignInViewController()
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
+        present(signInVC, animated: true, completion: nil)
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return slides.count
@@ -81,41 +116,9 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        print("User tapped on item \(indexPath.row)")
+//        print("User tapped on item \(indexPath.row)")
     }
     
     
     
 }
-
-
-//extension UIView {
-//    
-//    func anchorToTop(top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil) {
-//        
-//        anchorWithConstantsToTop(top: top, left: left, bottom: bottom, right: right, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
-//    }
-//    
-//    func anchorWithConstantsToTop(top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, topConstant: CGFloat = 0, leftConstant: CGFloat = 0, bottomConstant: CGFloat = 0, rightConstant: CGFloat = 0) {
-//        
-//        translatesAutoresizingMaskIntoConstraints = false
-//        
-//        if let top = top {
-//            topAnchor.constraint(equalTo: top, constant: topConstant).isActive = true
-//        }
-//        
-//        if let bottom = bottom {
-//            bottomAnchor.constraint(equalTo: bottom, constant: -bottomConstant).isActive = true
-//        }
-//        
-//        if let left = left {
-//            leftAnchor.constraint(equalTo: left, constant: leftConstant).isActive = true
-//        }
-//        
-//        if let right = right {
-//            rightAnchor.constraint(equalTo: right, constant: -rightConstant).isActive = true
-//        }
-//        
-//    }
-//    
-//}
