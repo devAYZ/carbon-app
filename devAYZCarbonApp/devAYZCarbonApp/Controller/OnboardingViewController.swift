@@ -63,7 +63,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         
         
         let navLabel = UILabel(frame: CGRect(x: 0,y: 0, width: view.frame.width - 70, height: view.frame.height))
-        navLabel.text = "SignIn"
+        navLabel.text = "Sign in"
         navLabel.textAlignment = .right
         navLabel.textColor =  #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1)
         navLabel.isUserInteractionEnabled = true

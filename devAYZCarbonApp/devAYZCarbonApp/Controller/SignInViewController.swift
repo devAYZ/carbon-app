@@ -55,6 +55,10 @@ extension SignInViewController {
         phoneCell.keyboardAppearance = .dark
 //        phoneCell.borderStyle = .line
         phoneCell.translatesAutoresizingMaskIntoConstraints = false
+        let phoneCellView = UIImageView()
+        phoneCellView.image = #imageLiteral(resourceName: "icons8-nigeria")
+        phoneCell.rightView = phoneCellView
+        phoneCell.rightViewMode = .always
         
         pin.text = "PIN"
         pin.translatesAutoresizingMaskIntoConstraints = false
@@ -62,6 +66,11 @@ extension SignInViewController {
         pinCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
         pinCell.keyboardAppearance = .dark
         pinCell.translatesAutoresizingMaskIntoConstraints = false
+        let pinCellView = UIButton()
+        pinCellView.setTitle("Forgot PIN?", for: .normal)
+        pinCellView.setTitleColor(.purple, for: .normal)
+        pinCell.rightView = pinCellView
+        pinCell.rightViewMode = .always
         
         signInByeInfo.text = "New to carbon? Setup new account"
         signInByeInfo.textAlignment = .center
