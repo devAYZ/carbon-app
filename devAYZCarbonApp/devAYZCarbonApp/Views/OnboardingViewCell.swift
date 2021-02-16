@@ -91,10 +91,10 @@ class OnboardingViewCell: UICollectionViewCell {
 
             logo.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
             logo.bottomAnchor.constraint(equalTo: imageView.topAnchor, constant: -80.0),
-            logo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 50.0),
-            logo.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50.0),
-            logo.heightAnchor.constraint(equalToConstant: 40),
-            logo.widthAnchor.constraint(equalToConstant: 80),
+            logo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 40.0),
+            logo.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -40.0),
+            logo.heightAnchor.constraint(equalToConstant: 50),
+            logo.widthAnchor.constraint(equalToConstant: 120),
 
 
 

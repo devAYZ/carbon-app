@@ -66,9 +66,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         navLabel.text = "SignIn"
         navLabel.textAlignment = .right
         navLabel.textColor =  #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1)
-        // Enable User Interaction
         navLabel.isUserInteractionEnabled = true
-        // Create and add the Gesture Recognizer
         let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(signInClicked(_:)))
         navLabel.addGestureRecognizer(guestureRecognizer)
         
@@ -81,11 +79,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     
     @objc func signInClicked(_ sender: Any) {
         //        print("Sign In clicked")
-        //this code will navigate to next view when you press button.
         let signInVC = SignInViewController()
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-//        self.navigationController?.pushViewController(vc, animated: true)
         present(signInVC, animated: true, completion: nil)
     }
     
