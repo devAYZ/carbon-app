@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //2
         window?.windowScene = windowScene
         //3
-        window?.rootViewController = OnboardingViewController()
+//        window?.rootViewController = OnboardingViewController()
+        window?.rootViewController = UINavigationController(rootViewController: OnboardingViewController())
         //4
         window?.makeKeyAndVisible()
     }
