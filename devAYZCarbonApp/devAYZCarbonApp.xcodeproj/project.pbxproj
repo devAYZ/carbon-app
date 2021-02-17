@@ -18,6 +18,9 @@
 		04672CAB25DBD2C20037F4CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CAA25DBD2C20037F4CA /* Constants.swift */; };
 		04672CD025DC539D0037F4CA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CCF25DC539D0037F4CA /* SignInViewController.swift */; };
 		04672CD525DC97450037F4CA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CD425DC97450037F4CA /* SignUpViewController.swift */; };
+		04672CD825DCFB270037F4CA /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CD725DCFB260037F4CA /* UserDetailsViewController.swift */; };
+		04672CDD25DD125F0037F4CA /* SignUpNetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CDC25DD125F0037F4CA /* SignUpNetworkCall.swift */; };
+		04672CE025DD12B20037F4CA /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CDF25DD12B20037F4CA /* UserDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		04672CAA25DBD2C20037F4CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04672CCF25DC539D0037F4CA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		04672CD425DC97450037F4CA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		04672CD725DCFB260037F4CA /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		04672CDC25DD125F0037F4CA /* SignUpNetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNetworkCall.swift; sourceTree = "<group>"; };
+		04672CDF25DD12B20037F4CA /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		04672C7425D84F590037F4CA /* devAYZCarbonApp */ = {
 			isa = PBXGroup;
 			children = (
+				04672CDA25DD0BF00037F4CA /* Network Calls */,
 				04672CA925DBD2AB0037F4CA /* Resources */,
 				04672CA825DBD2A10037F4CA /* Extension */,
 				04672C9525DAE1DD0037F4CA /* Controller */,
@@ -85,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				04672C9625DAE21E0037F4CA /* OnboardSlideContents.swift */,
+				04672CDF25DD12B20037F4CA /* UserDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +111,7 @@
 				04672C9B25DB01210037F4CA /* OnboardingViewController.swift */,
 				04672CCF25DC539D0037F4CA /* SignInViewController.swift */,
 				04672CD425DC97450037F4CA /* SignUpViewController.swift */,
+				04672CD725DCFB260037F4CA /* UserDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +129,14 @@
 				04672CAA25DBD2C20037F4CA /* Constants.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		04672CDA25DD0BF00037F4CA /* Network Calls */ = {
+			isa = PBXGroup;
+			children = (
+				04672CDC25DD125F0037F4CA /* SignUpNetworkCall.swift */,
+			);
+			path = "Network Calls";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,13 +208,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04672CD825DCFB270037F4CA /* UserDetailsViewController.swift in Sources */,
 				04672C7A25D84F590037F4CA /* ViewController.swift in Sources */,
 				04672C9725DAE21E0037F4CA /* OnboardSlideContents.swift in Sources */,
 				04672C9C25DB01210037F4CA /* OnboardingViewController.swift in Sources */,
 				04672C7625D84F590037F4CA /* AppDelegate.swift in Sources */,
+				04672CE025DD12B20037F4CA /* UserDetails.swift in Sources */,
 				04672CD025DC539D0037F4CA /* SignInViewController.swift in Sources */,
 				04672CAB25DBD2C20037F4CA /* Constants.swift in Sources */,
 				04672CD525DC97450037F4CA /* SignUpViewController.swift in Sources */,
+				04672CDD25DD125F0037F4CA /* SignUpNetworkCall.swift in Sources */,
 				04672C7825D84F590037F4CA /* SceneDelegate.swift in Sources */,
 				04672CA525DB1A940037F4CA /* OnboardingViewCell.swift in Sources */,
 			);

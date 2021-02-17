@@ -10,7 +10,6 @@ import UIKit
 class SignUpViewController: UIViewController {
     static let identifier = "SignUpViewController"
 
-//    var signUpWelcomeInfo = UITextView()
     
     lazy var createButton = UIButton()
     lazy var termsAndCondition = UITextView()
@@ -49,13 +48,14 @@ extension SignUpViewController {
         signupMessage.text = "Let's set things up. Please fill out these basic details to get started"
         signupMessage.translatesAutoresizingMaskIntoConstraints = false
         signupMessage.isEditable = false
-//        signupMessage.textAlignment = .center
+//        signupMessage.font = UIFont.systemFont(ofSize: 0)
         view.addSubview(signupMessage)
         
         
         surname.text = "Surname"
         surname.translatesAutoresizingMaskIntoConstraints = false
         surname.isEditable = false
+        surname.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         view.addSubview(surname)
         
         surnameCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
@@ -66,6 +66,7 @@ extension SignUpViewController {
         firstname.text = "First name"
         firstname.translatesAutoresizingMaskIntoConstraints = false
         firstname.isEditable = false
+        firstname.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         view.addSubview(firstname)
         
         firstnameCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
@@ -76,6 +77,7 @@ extension SignUpViewController {
         gender.text = "Gender"
         gender.translatesAutoresizingMaskIntoConstraints = false
         gender.isEditable = false
+        gender.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         view.addSubview(gender)
         
         genderCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
@@ -86,6 +88,7 @@ extension SignUpViewController {
         phone.text = "Phone number"
         phone.translatesAutoresizingMaskIntoConstraints = false
         phone.isEditable = false
+        phone.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         view.addSubview(phone)
         
         
@@ -97,6 +100,7 @@ extension SignUpViewController {
         email.text = "Email"
         email.translatesAutoresizingMaskIntoConstraints = false
         email.isEditable = false
+        email.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         view.addSubview(email)
         
         
@@ -108,6 +112,7 @@ extension SignUpViewController {
         password.text = "Password"
         password.translatesAutoresizingMaskIntoConstraints = false
         password.isEditable = false
+        password.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         view.addSubview(password)
         
         passwordCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
@@ -119,18 +124,23 @@ extension SignUpViewController {
         termsAndCondition.text = "By continuing, you accept our Terms of Service and Privacy Policy"
         termsAndCondition.translatesAutoresizingMaskIntoConstraints = false
         termsAndCondition.textAlignment = .center
+        termsAndCondition.textColor = .systemGray
         termsAndCondition.isEditable = false
+        termsAndCondition.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         view.addSubview(termsAndCondition)
         
         createButton.setTitle("Create account", for: .normal)
         createButton.backgroundColor = .systemGray
         createButton.translatesAutoresizingMaskIntoConstraints = false
-        createButton.layer.cornerRadius = 7
+        createButton.layer.cornerRadius = 6
+        createButton.addTarget(self, action: #selector(createAccountClicked(_:)), for: .touchUpInside)
+        createButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         view.addSubview(createButton)
         
         
         
-    
+        
+        
         NSLayoutConstraint.activate([
             
             signupMessage.heightAnchor.constraint(equalToConstant: 40),
@@ -204,18 +214,24 @@ extension SignUpViewController {
             passwordCell.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             passwordCell.bottomAnchor.constraint(equalTo: termsAndCondition.topAnchor, constant: -25),
             
-            termsAndCondition.bottomAnchor.constraint(equalTo: createButton.topAnchor, constant: -2),
+            termsAndCondition.bottomAnchor.constraint(equalTo: createButton.topAnchor, constant: -5),
             termsAndCondition.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             termsAndCondition.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             termsAndCondition.heightAnchor.constraint(equalToConstant: 40),
             
-            createButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20),
+            createButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -12),
             createButton.heightAnchor.constraint(equalToConstant: 50),
             createButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
             createButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25)
             
         
         ])
+    }
+    
+    @objc func createAccountClicked(_ sender: Any) {
+        //        print("Signing Up clicked.....")
+        let userDetailsVC = UINavigationController(rootViewController: UserDetailsViewController())
+        present(userDetailsVC, animated: true, completion: nil)
     }
     
 }
