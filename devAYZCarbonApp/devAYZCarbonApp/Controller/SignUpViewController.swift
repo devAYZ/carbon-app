@@ -230,6 +230,14 @@ extension SignUpViewController {
     
     @objc func createAccountClicked(_ sender: Any) {
         //        print("Signing Up clicked.....")
+        
+        let userdetails = UserDetailsViewController()
+        userPersonalDetails() { (details) in
+            
+            userdetails.id.text = details.id
+            debugPrint("done")
+            
+        }
         let userDetailsVC = UINavigationController(rootViewController: UserDetailsViewController())
         present(userDetailsVC, animated: true, completion: nil)
     }

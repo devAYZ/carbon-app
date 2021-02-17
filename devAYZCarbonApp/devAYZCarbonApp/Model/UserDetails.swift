@@ -7,11 +7,11 @@
 import Foundation
 
 struct UserDetails: Codable {
-    let id: String
-    let firstName: String
-    let lastName: String
-    let email: String
-    let password: String
-    let phoneNumber: String
-    let username: String
+    let id: String?
+    let firstName: String?
+    let lastName: String?
+    let email: String?
+//    let password: String?
+//    let phoneNumber: String?
+//    let username: String?
 }

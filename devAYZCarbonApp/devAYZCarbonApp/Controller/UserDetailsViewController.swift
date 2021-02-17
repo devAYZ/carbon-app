@@ -10,7 +10,6 @@ import UIKit
 class UserDetailsViewController: UIViewController {
     static let identifier = "UserDetailsViewController"
     
-//    lazy var success = UITextView()
     lazy var nextButton = UIButton()
     lazy var idCell = UITextView()
     lazy var id = UITextView()
@@ -61,7 +60,7 @@ extension UserDetailsViewController {
         idCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
         idCell.textColor = .systemGray
         idCell.text = "Display: 'id' from Network Call"
-        idCell.isEditable = false
+//        idCell.isEditable = false
         idCell.isSelectable = false
         idCell.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(idCell)
