@@ -3,14 +3,12 @@
 //  devAYZCarbonApp
 //
 //  Created by Ayokunle on 17/02/2021.
-//
 
 import UIKit
 
 class SignUpViewController: UIViewController {
     static let identifier = "SignUpViewController"
 
-    
     lazy var createButton = UIButton()
     lazy var termsAndCondition = UITextView()
     lazy var passwordCell = UITextField()

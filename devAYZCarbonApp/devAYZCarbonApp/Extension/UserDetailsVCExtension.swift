@@ -3,7 +3,6 @@
 //  devAYZCarbonApp
 //
 //  Created by Ayokunle on 17/02/2021.
-//
 
 import Foundation
 import UIKit
@@ -17,10 +16,8 @@ extension UserDetailsViewController {
         
         
         savedInfo.text = "Hi there, you have created your account successfully!"
-//        savedInfo.textAlignment = .center
         savedInfo.translatesAutoresizingMaskIntoConstraints = false
         savedInfo.isEditable = false
-//        savedInfo.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         view.addSubview(savedInfo)
         
         lastname.text = "Surname:"
@@ -126,7 +123,6 @@ extension UserDetailsViewController {
         nextButton.backgroundColor = #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.layer.cornerRadius = 6
-//        nextButton.addTarget(self, action: #selector(createAccountClicked(_:)), for: .touchUpInside)
         view.addSubview(nextButton)
         
         
@@ -213,7 +209,7 @@ extension UserDetailsViewController {
             nextButton.heightAnchor.constraint(equalToConstant: 50),
             nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
             nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25)
-        
+            
         ])
         
     }

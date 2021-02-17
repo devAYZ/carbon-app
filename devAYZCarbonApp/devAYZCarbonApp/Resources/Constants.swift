@@ -12,7 +12,6 @@ struct OnboardTextContent {
     static let logoView = #imageLiteral(resourceName: "logo")
     static let slidesButtonText = "Set Up New Account"
     
-    
     static let slideOneTitle = "Go beyond banking"
     static let slideTwoTitle = "Stay on top of your finances. \n Anytime. Anywhere"
     static let slideThreeTitle = "Trusted by millions"

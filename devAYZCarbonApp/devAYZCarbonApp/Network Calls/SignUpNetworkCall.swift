@@ -8,10 +8,8 @@ import Foundation
 
 func userPersonalDetails(CompletionHandler: @escaping (UserDetails) -> Void){
     
-//    let signup = SignUpViewController()
-    
     let sigunForm = [
-        "username": "dev@ayz" //signup.emailCell.text
+        "username": "dev@ayz"
     ]
     
     guard let url = URL(string: "https://5f7505151cf3c900161cdb66.mockapi.io/api/v1/signup") else {
@@ -33,8 +31,7 @@ func userPersonalDetails(CompletionHandler: @escaping (UserDetails) -> Void){
             print("no data retrived")
             return
         }
-//        let detailsResult = try? JSONSerialization.jsonObject(with: data, options: [])
-//        debugPrint(detailsResult)
+        
         let decoder = JSONDecoder()
         do {
             detailsResult = try decoder.decode(UserDetails.self, from: data)

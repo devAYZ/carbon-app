@@ -92,11 +92,5 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-    {
-//        print("User tapped on item \(indexPath.row)")
-    }
-    
-    
     
 }

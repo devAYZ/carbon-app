@@ -11,12 +11,10 @@ import UIKit
 extension SignUpViewController {
     
     func setupSignUp() {
-//        view.addSubview(signUpWelcomeInfo)
         
         signupMessage.text = "Let's set things up. Please fill out these basic details to get started"
         signupMessage.translatesAutoresizingMaskIntoConstraints = false
         signupMessage.isEditable = false
-//        signupMessage.font = UIFont.systemFont(ofSize: 0)
         view.addSubview(signupMessage)
         
         
@@ -192,21 +190,18 @@ extension SignUpViewController {
             createButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
             createButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25)
             
-        
+            
         ])
     }
     
     
     
     @objc func createAccountClicked(_ sender: Any) {
-        //        print("Signing Up clicked.....")
-        
-//        let userdetails = UserDetailsViewController()
         
         userPersonalDetails() { (details) in
             
             print(details.id)
-           
+            
             
             DispatchQueue.main.async {
                 let copyVC = UserDetailsViewController.self
