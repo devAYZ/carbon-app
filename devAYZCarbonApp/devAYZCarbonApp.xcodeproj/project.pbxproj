@@ -12,7 +12,7 @@
 		04672C7A25D84F590037F4CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672C7925D84F590037F4CA /* ViewController.swift */; };
 		04672C7F25D84F5D0037F4CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04672C7E25D84F5D0037F4CA /* Assets.xcassets */; };
 		04672C8225D84F5D0037F4CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04672C8025D84F5D0037F4CA /* LaunchScreen.storyboard */; };
-		04672C9725DAE21E0037F4CA /* OnboardSlideContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672C9625DAE21E0037F4CA /* OnboardSlideContents.swift */; };
+		04672C9725DAE21E0037F4CA /* OnboardSlideContentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672C9625DAE21E0037F4CA /* OnboardSlideContentsModel.swift */; };
 		04672C9C25DB01210037F4CA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672C9B25DB01210037F4CA /* OnboardingViewController.swift */; };
 		04672CA525DB1A940037F4CA /* OnboardingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CA425DB1A940037F4CA /* OnboardingViewCell.swift */; };
 		04672CAB25DBD2C20037F4CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CAA25DBD2C20037F4CA /* Constants.swift */; };
@@ -20,7 +20,11 @@
 		04672CD525DC97450037F4CA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CD425DC97450037F4CA /* SignUpViewController.swift */; };
 		04672CD825DCFB270037F4CA /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CD725DCFB260037F4CA /* UserDetailsViewController.swift */; };
 		04672CDD25DD125F0037F4CA /* SignUpNetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CDC25DD125F0037F4CA /* SignUpNetworkCall.swift */; };
-		04672CE025DD12B20037F4CA /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CDF25DD12B20037F4CA /* UserDetails.swift */; };
+		04672CE025DD12B20037F4CA /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CDF25DD12B20037F4CA /* UserDetailsModel.swift */; };
+		04672CE725DD6BCE0037F4CA /* OnboardingVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CE625DD6BCE0037F4CA /* OnboardingVCExtension.swift */; };
+		04672CEA25DD6C260037F4CA /* SignInVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CE925DD6C260037F4CA /* SignInVCExtension.swift */; };
+		04672CED25DD6C630037F4CA /* SignUpVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CEC25DD6C630037F4CA /* SignUpVCExtension.swift */; };
+		04672CF025DD6CAD0037F4CA /* UserDetailsVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672CEF25DD6CAD0037F4CA /* UserDetailsVCExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +35,7 @@
 		04672C7E25D84F5D0037F4CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04672C8125D84F5D0037F4CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04672C8325D84F5D0037F4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04672C9625DAE21E0037F4CA /* OnboardSlideContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSlideContents.swift; sourceTree = "<group>"; };
+		04672C9625DAE21E0037F4CA /* OnboardSlideContentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSlideContentsModel.swift; sourceTree = "<group>"; };
 		04672C9B25DB01210037F4CA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		04672CA425DB1A940037F4CA /* OnboardingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewCell.swift; sourceTree = "<group>"; };
 		04672CAA25DBD2C20037F4CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -39,7 +43,11 @@
 		04672CD425DC97450037F4CA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		04672CD725DCFB260037F4CA /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		04672CDC25DD125F0037F4CA /* SignUpNetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNetworkCall.swift; sourceTree = "<group>"; };
-		04672CDF25DD12B20037F4CA /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		04672CDF25DD12B20037F4CA /* UserDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
+		04672CE625DD6BCE0037F4CA /* OnboardingVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVCExtension.swift; sourceTree = "<group>"; };
+		04672CE925DD6C260037F4CA /* SignInVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVCExtension.swift; sourceTree = "<group>"; };
+		04672CEC25DD6C630037F4CA /* SignUpVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVCExtension.swift; sourceTree = "<group>"; };
+		04672CEF25DD6CAD0037F4CA /* UserDetailsVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVCExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +99,8 @@
 		04672C9325DAE1980037F4CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04672C9625DAE21E0037F4CA /* OnboardSlideContents.swift */,
-				04672CDF25DD12B20037F4CA /* UserDetails.swift */,
+				04672C9625DAE21E0037F4CA /* OnboardSlideContentsModel.swift */,
+				04672CDF25DD12B20037F4CA /* UserDetailsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,6 +127,10 @@
 		04672CA825DBD2A10037F4CA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				04672CE625DD6BCE0037F4CA /* OnboardingVCExtension.swift */,
+				04672CE925DD6C260037F4CA /* SignInVCExtension.swift */,
+				04672CEC25DD6C630037F4CA /* SignUpVCExtension.swift */,
+				04672CEF25DD6CAD0037F4CA /* UserDetailsVCExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -210,15 +222,19 @@
 			files = (
 				04672CD825DCFB270037F4CA /* UserDetailsViewController.swift in Sources */,
 				04672C7A25D84F590037F4CA /* ViewController.swift in Sources */,
-				04672C9725DAE21E0037F4CA /* OnboardSlideContents.swift in Sources */,
+				04672CF025DD6CAD0037F4CA /* UserDetailsVCExtension.swift in Sources */,
+				04672C9725DAE21E0037F4CA /* OnboardSlideContentsModel.swift in Sources */,
 				04672C9C25DB01210037F4CA /* OnboardingViewController.swift in Sources */,
+				04672CED25DD6C630037F4CA /* SignUpVCExtension.swift in Sources */,
 				04672C7625D84F590037F4CA /* AppDelegate.swift in Sources */,
-				04672CE025DD12B20037F4CA /* UserDetails.swift in Sources */,
+				04672CE025DD12B20037F4CA /* UserDetailsModel.swift in Sources */,
 				04672CD025DC539D0037F4CA /* SignInViewController.swift in Sources */,
 				04672CAB25DBD2C20037F4CA /* Constants.swift in Sources */,
 				04672CD525DC97450037F4CA /* SignUpViewController.swift in Sources */,
 				04672CDD25DD125F0037F4CA /* SignUpNetworkCall.swift in Sources */,
+				04672CEA25DD6C260037F4CA /* SignInVCExtension.swift in Sources */,
 				04672C7825D84F590037F4CA /* SceneDelegate.swift in Sources */,
+				04672CE725DD6BCE0037F4CA /* OnboardingVCExtension.swift in Sources */,
 				04672CA525DB1A940037F4CA /* OnboardingViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
