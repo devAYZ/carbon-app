@@ -58,6 +58,8 @@ extension SignInViewController {
         let phoneCellView = UIImageView()
         phoneCellView.image = #imageLiteral(resourceName: "icons8-nigeria")
         phoneCell.rightView = phoneCellView
+        
+    
         phoneCell.rightViewMode = .always
         
         pin.text = "PIN"

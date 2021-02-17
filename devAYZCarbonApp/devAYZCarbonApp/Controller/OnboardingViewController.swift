@@ -10,28 +10,22 @@ import UIKit
 class OnboardingViewController: UIViewController {
     
     public let slides: [SlideContents] = SlideContents.collection
+    lazy var button = UIButton()
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         view.backgroundColor = .white
         setupCollectionView()
     }
     
-//    @objc func selectorX() { }
-    
 }
 
 extension OnboardingViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    
     
     func setupCollectionView(){
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -40,26 +34,11 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(OnboardingViewCell.self, forCellWithReuseIdentifier: OnboardingViewCell.identifier)
-        collectionView.backgroundColor = UIColor.white
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.isPagingEnabled = true
         collectionView.frame = view.bounds
-        collectionView.backgroundColor = .systemPurple
+        collectionView.backgroundColor = .purple //.white
         self.view.addSubview(collectionView)
-        
-        
-//        let navLabel = UILabel(frame: CGRect(x: 0,y: 0, width: view.frame.width - 70, height: view.frame.height))
-//        navLabel.setTitle("Sign In", for: .normal)
-//        navLabel.setTitleColor( #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1), for: .normal)
-//        navLabel.isEnabled = true
-//
-//        navigationItem.titleView = navLabel.titleLabel
-//        var navLabelText = ""
-//        let slideC: SlideContents
-//        let slideCC = slideC.title
-//        if slideCC == "0" {
-//            navLabelText = "Skip"
-        //        }
         
         
         let navLabel = UILabel(frame: CGRect(x: 0,y: 0, width: view.frame.width - 70, height: view.frame.height))
@@ -69,18 +48,38 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         navLabel.isUserInteractionEnabled = true
         let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(signInClicked(_:)))
         navLabel.addGestureRecognizer(guestureRecognizer)
-        
         navigationItem.titleView = navLabel
         
         
+        button.setTitle(OnboardTextContent.slidesButtonText, for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1)
+        button.isEnabled = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 7
+        button.addTarget(self, action: #selector(signUpClicked(_:)), for: .touchUpInside)
+        button.isPointerInteractionEnabled = true
+        self.view.addSubview(button)
         
+        
+        NSLayoutConstraint.activate([
+            button.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20),
+            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
+            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
+            button.heightAnchor.constraint(equalToConstant: 50)
+            
+        ])
+
     }
     
-    
     @objc func signInClicked(_ sender: Any) {
-        //        print("Sign In clicked")
         let signInVC = SignInViewController()
         present(signInVC, animated: true, completion: nil)
+    }
+    
+    @objc func signUpClicked(_ sender: Any) {
+//        print("Signing Up clicked.....")
+        let signUpVC = UINavigationController(rootViewController: SignUpViewController())
+        present(signUpVC, animated: true, completion: nil)
     }
     
     
@@ -110,7 +109,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-//        print("User tapped on item \(indexPath.row)")
+        print("User tapped on item \(indexPath.row)")
     }
     
     
