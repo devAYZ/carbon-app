@@ -37,7 +37,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.isPagingEnabled = true
         collectionView.frame = view.bounds
-        collectionView.backgroundColor = .purple //.white
+        collectionView.backgroundColor = .white
         self.view.addSubview(collectionView)
         
         

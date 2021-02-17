@@ -46,24 +46,23 @@ extension SignInViewController {
         signInWelcomeInfo.text = "Hi there, welcome back. Please sign in"
         signInWelcomeInfo.textAlignment = .center
         signInWelcomeInfo.translatesAutoresizingMaskIntoConstraints = false
-//        signInWelcomeInfo.isEditable = true
+        signInWelcomeInfo.isEditable = false
         
         phone.text = "Phone number"
         phone.translatesAutoresizingMaskIntoConstraints = false
+        phone.isEditable = false
         
         phoneCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
         phoneCell.keyboardAppearance = .dark
-//        phoneCell.borderStyle = .line
         phoneCell.translatesAutoresizingMaskIntoConstraints = false
         let phoneCellView = UIImageView()
         phoneCellView.image = #imageLiteral(resourceName: "icons8-nigeria")
         phoneCell.rightView = phoneCellView
-        
-    
         phoneCell.rightViewMode = .always
         
         pin.text = "PIN"
         pin.translatesAutoresizingMaskIntoConstraints = false
+        pin.isEditable = false
         
         pinCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
         pinCell.keyboardAppearance = .dark
@@ -76,8 +75,8 @@ extension SignInViewController {
         
         signInByeInfo.text = "New to carbon? Setup new account"
         signInByeInfo.textAlignment = .center
-//        signInByeInfo.backgroundColor = .red
         signInByeInfo.translatesAutoresizingMaskIntoConstraints = false
+        signInByeInfo.isEditable = false
 
         
         NSLayoutConstraint.activate([
@@ -115,9 +114,6 @@ extension SignInViewController {
             signInByeInfo.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             signInByeInfo.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             signInByeInfo.heightAnchor.constraint(equalToConstant: 40),
-
-
-
 
         ])
     }

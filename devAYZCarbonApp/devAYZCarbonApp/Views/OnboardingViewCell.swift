@@ -60,7 +60,7 @@ extension OnboardingViewCell {
         
         imageView.image = slide.imageView
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.setContentCompressionResistancePriority(UILayoutPriority(1), for: .horizontal)
+        imageView.setContentCompressionResistancePriority(UILayoutPriority(1), for: .vertical)
         imageView.contentMode = .scaleAspectFit
         
         title.text = slide.title
