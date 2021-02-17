@@ -19,8 +19,8 @@ class SignUpViewController: UIViewController {
     lazy var email = UITextView()
     lazy var phoneCell = UITextField()
     lazy var phone = UITextView()
-    lazy var genderCell = UITextField()
-    lazy var gender = UITextView()
+    lazy var usernameCell = UITextField()
+    lazy var username = UITextView()
     lazy var firstnameCell = UITextField()
     lazy var firstname = UITextView()
     lazy var surnameCell = UITextField()
@@ -74,16 +74,16 @@ extension SignUpViewController {
         firstnameCell.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(firstnameCell)
         
-        gender.text = "Gender"
-        gender.translatesAutoresizingMaskIntoConstraints = false
-        gender.isEditable = false
-        gender.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-        view.addSubview(gender)
+        username.text = "Username"
+        username.translatesAutoresizingMaskIntoConstraints = false
+        username.isEditable = false
+        username.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        view.addSubview(username)
         
-        genderCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
-        genderCell.keyboardAppearance = .dark
-        genderCell.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(genderCell)
+        usernameCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
+        usernameCell.keyboardAppearance = .dark
+        usernameCell.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(usernameCell)
         
         phone.text = "Phone number"
         phone.translatesAutoresizingMaskIntoConstraints = false
@@ -168,17 +168,17 @@ extension SignUpViewController {
             firstnameCell.heightAnchor.constraint(equalToConstant: 50),
             firstnameCell.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             firstnameCell.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            firstnameCell.bottomAnchor.constraint(equalTo: gender.topAnchor, constant: -15),
+            firstnameCell.bottomAnchor.constraint(equalTo: username.topAnchor, constant: -15),
             
-            gender.heightAnchor.constraint(equalToConstant: 30),
-            gender.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
-            gender.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            gender.bottomAnchor.constraint(equalTo: genderCell.topAnchor),
+            username.heightAnchor.constraint(equalToConstant: 30),
+            username.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
+            username.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            username.bottomAnchor.constraint(equalTo: usernameCell.topAnchor),
             
-            genderCell.heightAnchor.constraint(equalToConstant: 50),
-            genderCell.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            genderCell.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            genderCell.bottomAnchor.constraint(equalTo: phone.topAnchor, constant: -15),
+            usernameCell.heightAnchor.constraint(equalToConstant: 50),
+            usernameCell.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            usernameCell.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            usernameCell.bottomAnchor.constraint(equalTo: phone.topAnchor, constant: -15),
             
             
             phone.heightAnchor.constraint(equalToConstant: 30),
