@@ -47,10 +47,12 @@ extension SignInViewController {
         signInWelcomeInfo.textAlignment = .center
         signInWelcomeInfo.translatesAutoresizingMaskIntoConstraints = false
         signInWelcomeInfo.isEditable = false
+        signInWelcomeInfo.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         
         phone.text = "Phone number"
         phone.translatesAutoresizingMaskIntoConstraints = false
         phone.isEditable = false
+        phone.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         
         phoneCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
         phoneCell.keyboardAppearance = .dark
@@ -63,6 +65,7 @@ extension SignInViewController {
         pin.text = "PIN"
         pin.translatesAutoresizingMaskIntoConstraints = false
         pin.isEditable = false
+        pin.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         
         pinCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
         pinCell.keyboardAppearance = .dark
@@ -70,6 +73,7 @@ extension SignInViewController {
         let pinCellView = UIButton()
         pinCellView.setTitle("Forgot PIN?", for: .normal)
         pinCellView.setTitleColor(.purple, for: .normal)
+        pinCellView.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         pinCell.rightView = pinCellView
         pinCell.rightViewMode = .always
         
@@ -77,6 +81,7 @@ extension SignInViewController {
         signInByeInfo.textAlignment = .center
         signInByeInfo.translatesAutoresizingMaskIntoConstraints = false
         signInByeInfo.isEditable = false
+        signInByeInfo.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
 
         
         NSLayoutConstraint.activate([

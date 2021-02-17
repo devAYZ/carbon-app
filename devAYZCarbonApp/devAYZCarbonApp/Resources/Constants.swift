@@ -13,11 +13,11 @@ struct OnboardTextContent {
     static let slidesButtonText = "Set Up New Account"
     
     
-    static let slideOneTitle = "Go beyond Banking"
+    static let slideOneTitle = "Go beyond banking"
     static let slideTwoTitle = "Stay on top of your finances. \n Anytime. Anywhere"
     static let slideThreeTitle = "Trusted by millions"
     
-    static let slideOneBody = "Welcome to the Future Welcome to the Future Welcome to the Future Welcome to the Future Welcome to the Future Welcome to the Future"
+    static let slideOneBody = "Welcome to the Future. Carbon is your passport to world-class financial services, built just for you."
     static let slideTwoBody = ""
     static let slideThreeBody = ""
     

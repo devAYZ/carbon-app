@@ -66,24 +66,28 @@ extension OnboardingViewCell {
         title.text = slide.title
         title.textAlignment = .center
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.backgroundColor = .systemGray
+//        title.backgroundColor = .systemGray
         title.isSelectable = true
         title.isEditable = true
+        title.font = UIFont.systemFont(ofSize: 22, weight: .bold)
         
         body.text = slide.body
         body.textAlignment = .center
         body.translatesAutoresizingMaskIntoConstraints = false
-        body.backgroundColor = .systemTeal
+//        body.backgroundColor = .systemTeal
+        body.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         
         
-        button.setTitle(OnboardTextContent.slidesButtonText, for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1)
-        button.isEnabled = true
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 7
-//        button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
-        button.isPointerInteractionEnabled = true
-        
+//        button.setTitle(OnboardTextContent.slidesButtonText, for: .normal)
+//        button.backgroundColor = #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1)
+//        button.isEnabled = true
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.layer.cornerRadius = 7
+////        button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
+//        button.isPointerInteractionEnabled = true
+////        button.titleLabel!.font = UIFont.systemFont(ofSize: 10, weight: .heavy)
+//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+//        
         
         NSLayoutConstraint.activate([
             
@@ -106,14 +110,14 @@ extension OnboardingViewCell {
             imageView.widthAnchor.constraint(equalToConstant: 80),
             
             
-            title.bottomAnchor.constraint(equalTo: body.topAnchor, constant: -20.0),
+            title.bottomAnchor.constraint(equalTo: body.topAnchor, constant: -10.0),
             title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 25.0),
             title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -25.0),
-            title.heightAnchor.constraint(equalToConstant: 50),
+            title.heightAnchor.constraint(equalToConstant: 40),
             
             body.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -150.0),
-            body.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 25.0),
-            body.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -25.0),
+            body.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 40.0),
+            body.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -40.0),
             body.heightAnchor.constraint(equalToConstant: 70),
         
 //            button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -50.0),

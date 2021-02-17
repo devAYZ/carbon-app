@@ -41,10 +41,11 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         self.view.addSubview(collectionView)
         
         
-        let navLabel = UILabel(frame: CGRect(x: 0,y: 0, width: view.frame.width - 70, height: view.frame.height))
+        let navLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 40, height: view.frame.height))
         navLabel.text = "Sign in"
         navLabel.textAlignment = .right
         navLabel.textColor =  #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1)
+        navLabel.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         navLabel.isUserInteractionEnabled = true
         let guestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(signInClicked(_:)))
         navLabel.addGestureRecognizer(guestureRecognizer)
@@ -58,6 +59,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         button.layer.cornerRadius = 7
         button.addTarget(self, action: #selector(signUpClicked(_:)), for: .touchUpInside)
         button.isPointerInteractionEnabled = true
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         self.view.addSubview(button)
         
         
@@ -109,7 +111,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        print("User tapped on item \(indexPath.row)")
+//        print("User tapped on item \(indexPath.row)")
     }
     
     
