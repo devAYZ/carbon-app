@@ -17,11 +17,13 @@ class SignInViewController: UIViewController {
     lazy var pin = UITextView()
     lazy var pinCell = UITextField()
     lazy var signInByeInfo = UITextView()
+    lazy var setupNewAccount = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+        
         setupSignIn()
     }
 

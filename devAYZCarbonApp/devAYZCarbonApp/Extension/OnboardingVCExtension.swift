@@ -62,9 +62,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     }
     
     @objc func signUpClicked(_ sender: Any) {
-
-        let signUpVC = UINavigationController(rootViewController: SignUpViewController())
-        present(signUpVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
     
     
@@ -78,7 +76,6 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         myCell.configure(with: slide)
         return myCell
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth = collectionView.bounds.width

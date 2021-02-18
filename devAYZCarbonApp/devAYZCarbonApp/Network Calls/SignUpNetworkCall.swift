@@ -33,6 +33,7 @@ func userPersonalDetails(CompletionHandler: @escaping (UserDetails) -> Void){
         }
         
         let decoder = JSONDecoder()
+        
         do {
             detailsResult = try decoder.decode(UserDetails.self, from: data)
             CompletionHandler(detailsResult)

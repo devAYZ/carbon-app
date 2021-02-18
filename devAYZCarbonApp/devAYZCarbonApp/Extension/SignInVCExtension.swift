@@ -16,6 +16,7 @@ extension SignInViewController {
         view.addSubview(pin)
         view.addSubview(pinCell)
         view.addSubview(signInByeInfo)
+//        view.addSubview(setupNewAccount)
         
         logo.image = OnboardTextContent.logoView
         logo.contentMode = .scaleAspectFit
@@ -48,6 +49,7 @@ extension SignInViewController {
         pinCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
         pinCell.keyboardAppearance = .dark
         pinCell.translatesAutoresizingMaskIntoConstraints = false
+        pinCell.isSecureTextEntry = true
         let pinCellView = UIButton()
         pinCellView.setTitle("Forgot PIN?", for: .normal)
         pinCellView.setTitleColor(.purple, for: .normal)
@@ -60,6 +62,10 @@ extension SignInViewController {
         signInByeInfo.translatesAutoresizingMaskIntoConstraints = false
         signInByeInfo.isEditable = false
         signInByeInfo.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        
+        setupNewAccount.setTitle("Create account", for: .normal)
+        setupNewAccount.translatesAutoresizingMaskIntoConstraints = false
+        //setupNewAccount
 
         
         NSLayoutConstraint.activate([
@@ -96,7 +102,16 @@ extension SignInViewController {
             signInByeInfo.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 20),
             signInByeInfo.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             signInByeInfo.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            signInByeInfo.trailingAnchor.constraint(equalTo: setupNewAccount.leftAnchor),
             signInByeInfo.heightAnchor.constraint(equalToConstant: 40),
+            
+//            setupNewAccount.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 20),
+//            setupNewAccount.centerXAnchor.constraint(equalTo: signInByeInfo.centerXAnchor),
+//            setupNewAccount.leadingAnchor.constraint(equalTo: signInByeInfo.rightAnchor),
+//            setupNewAccount.centerYAnchor.constraint(equalTo: signInByeInfo.centerYAnchor),
+//            setupNewAccount.heightAnchor.constraint(equalToConstant: 40),
+//            setupNewAccount.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//
 
         ])
     }

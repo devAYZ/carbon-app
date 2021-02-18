@@ -25,8 +25,6 @@ class OnboardingViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-   
 }
 
 
@@ -40,8 +38,6 @@ extension OnboardingViewCell {
         addSubview(imageView)
         addSubview(title)
         addSubview(body)
-        
-        
     }
     
 
@@ -77,17 +73,7 @@ extension OnboardingViewCell {
 //        body.backgroundColor = .systemTeal
         body.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         
-        
-//        button.setTitle(OnboardTextContent.slidesButtonText, for: .normal)
-//        button.backgroundColor = #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1)
-//        button.isEnabled = true
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.layer.cornerRadius = 7
-////        button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
-//        button.isPointerInteractionEnabled = true
-////        button.titleLabel!.font = UIFont.systemFont(ofSize: 10, weight: .heavy)
-//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-//        
+      
         
         NSLayoutConstraint.activate([
             
@@ -130,9 +116,6 @@ extension OnboardingViewCell {
         
     }
     
-//    @objc func buttonAction(_ sender: Any) {
-//        print("Signing Up clicked")
-//    }
     
     override func prepareForReuse() {
         

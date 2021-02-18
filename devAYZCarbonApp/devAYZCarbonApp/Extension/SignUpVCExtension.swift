@@ -15,6 +15,8 @@ extension SignUpViewController {
         signupMessage.text = "Let's set things up. Please fill out these basic details to get started"
         signupMessage.translatesAutoresizingMaskIntoConstraints = false
         signupMessage.isEditable = false
+        //signupMessage.setContentCompressionResistancePriority(UILayoutPriority(1), for: .vertical)
+        //signupMessage.setContentHuggingPriority(UILayoutPriority(1000), for: .vertical)
         view.addSubview(signupMessage)
         
         
@@ -83,6 +85,7 @@ extension SignUpViewController {
         
         passwordCell.backgroundColor = #colorLiteral(red: 0.952880919, green: 0.9486935735, blue: 0.9692631364, alpha: 1)
         passwordCell.keyboardAppearance = .dark
+        passwordCell.isSecureTextEntry = true
         passwordCell.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(passwordCell)
         
@@ -109,8 +112,8 @@ extension SignUpViewController {
         
         NSLayoutConstraint.activate([
             
-            signupMessage.heightAnchor.constraint(equalToConstant: 40),
-            signupMessage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            signupMessage.heightAnchor.constraint(equalToConstant: 100),
+            signupMessage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
             signupMessage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             signupMessage.bottomAnchor.constraint(equalTo: surname.topAnchor, constant: -15),
             signupMessage.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 10),
@@ -200,8 +203,6 @@ extension SignUpViewController {
         
         userPersonalDetails() { (details) in
             
-            print(details.id)
-            
             
             DispatchQueue.main.async {
                 let copyVC = UserDetailsViewController.self
@@ -217,8 +218,8 @@ extension SignUpViewController {
             
             
         }
-        let userDetailsVC = UINavigationController(rootViewController: UserDetailsViewController())
-        present(userDetailsVC, animated: true, completion: nil)
+        
+        self.navigationController?.pushViewController(UserDetailsViewController(), animated: true)
     }
     
 }
