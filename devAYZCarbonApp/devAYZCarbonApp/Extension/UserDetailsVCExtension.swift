@@ -123,6 +123,8 @@ extension UserDetailsViewController {
         nextButton.backgroundColor = #colorLiteral(red: 0.4956101179, green: 0.3279817104, blue: 0.8073155284, alpha: 1)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.layer.cornerRadius = 6
+        nextButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        nextButton.setTitleColor(.white, for: .normal)
         view.addSubview(nextButton)
         
         

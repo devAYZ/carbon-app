@@ -104,6 +104,7 @@ extension SignUpViewController {
         createButton.layer.cornerRadius = 6
         createButton.addTarget(self, action: #selector(createAccountClicked(_:)), for: .touchUpInside)
         createButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        createButton.setTitleColor(.white, for: .normal)
         view.addSubview(createButton)
         
         
@@ -203,21 +204,24 @@ extension SignUpViewController {
         
         userPersonalDetails() { (details) in
             
-            
             DispatchQueue.main.async {
                 let copyVC = UserDetailsViewController.self
-                
+
                 copyVC.firstnameCell.text! = details.firstName
                 copyVC.emailCell.text! = details.email
                 copyVC.phoneCell.text! = details.phoneNumber
                 copyVC.passwordCell.text! = details.password
                 copyVC.idCell.text! = details.id
             }
-            
-            debugPrint("done")
-            
+
+//            debugPrint("done")
             
         }
+        
+//        print(self.surnameCell.text!)
+//        print(self.firstnameCell.text!)
+//        print(self.usernameCell.text!)
+//        debugPrint("done")
         
         self.navigationController?.pushViewController(UserDetailsViewController(), animated: true)
     }

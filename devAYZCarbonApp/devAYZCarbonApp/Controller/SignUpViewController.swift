@@ -9,7 +9,7 @@ import UIKit
 class SignUpViewController: UIViewController {
     static let identifier = "SignUpViewController"
 
-    lazy var createButton = UIButton()
+    lazy var createButton = UIButton(type: .system)
     lazy var termsAndCondition = UITextView()
     lazy var passwordCell = UITextField()
     lazy var password = UITextView()

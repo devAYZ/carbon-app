@@ -16,7 +16,7 @@ extension SignInViewController {
         view.addSubview(pin)
         view.addSubview(pinCell)
         view.addSubview(signInByeInfo)
-//        view.addSubview(setupNewAccount)
+        view.addSubview(setupNewAccount)
         
         logo.image = OnboardTextContent.logoView
         logo.contentMode = .scaleAspectFit
@@ -50,22 +50,27 @@ extension SignInViewController {
         pinCell.keyboardAppearance = .dark
         pinCell.translatesAutoresizingMaskIntoConstraints = false
         pinCell.isSecureTextEntry = true
-        let pinCellView = UIButton()
+        let pinCellView = UIButton(type: .system)
         pinCellView.setTitle("Forgot PIN?", for: .normal)
         pinCellView.setTitleColor(.purple, for: .normal)
         pinCellView.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         pinCell.rightView = pinCellView
         pinCell.rightViewMode = .always
         
-        signInByeInfo.text = "New to carbon? Setup new account"
-        signInByeInfo.textAlignment = .center
+        setupNewAccount.setTitle("Setup new account", for: .normal)
+        setupNewAccount.addTarget(self, action: #selector( setUpClicked(_:) ) , for: .touchUpInside )
+        setupNewAccount.translatesAutoresizingMaskIntoConstraints = false
+        setupNewAccount.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        
+        //setupNewAccount
+        
+        signInByeInfo.text = "New to carbon?"
+        signInByeInfo.textAlignment = .right
         signInByeInfo.translatesAutoresizingMaskIntoConstraints = false
         signInByeInfo.isEditable = false
-        signInByeInfo.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        signInByeInfo.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         
-        setupNewAccount.setTitle("Create account", for: .normal)
-        setupNewAccount.translatesAutoresizingMaskIntoConstraints = false
-        //setupNewAccount
+        
 
         
         NSLayoutConstraint.activate([
@@ -99,20 +104,35 @@ extension SignInViewController {
             pinCell.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             pinCell.heightAnchor.constraint(equalToConstant: 50),
             
-            signInByeInfo.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 20),
-            signInByeInfo.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            signInByeInfo.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            signInByeInfo.trailingAnchor.constraint(equalTo: setupNewAccount.leftAnchor),
-            signInByeInfo.heightAnchor.constraint(equalToConstant: 40),
             
-//            setupNewAccount.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 20),
-//            setupNewAccount.centerXAnchor.constraint(equalTo: signInByeInfo.centerXAnchor),
-//            setupNewAccount.leadingAnchor.constraint(equalTo: signInByeInfo.rightAnchor),
-//            setupNewAccount.centerYAnchor.constraint(equalTo: signInByeInfo.centerYAnchor),
-//            setupNewAccount.heightAnchor.constraint(equalToConstant: 40),
-//            setupNewAccount.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//
+            setupNewAccount.heightAnchor.constraint(equalToConstant: 40),
+            setupNewAccount.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 10),
+            setupNewAccount.centerYAnchor.constraint(equalTo: signInByeInfo.centerYAnchor),
+            
+            setupNewAccount.leadingAnchor.constraint(equalTo: signInByeInfo.trailingAnchor),
+            setupNewAccount.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
+            
+            
+            
+            
+            signInByeInfo.heightAnchor.constraint(equalToConstant: 35),
+            signInByeInfo.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 10),
+            signInByeInfo.centerYAnchor.constraint(equalTo: setupNewAccount.centerYAnchor),
+            signInByeInfo.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            signInByeInfo.trailingAnchor.constraint(equalTo: setupNewAccount.leadingAnchor),
+
+            
+            
 
         ])
+    }
+    
+    
+    @objc func setUpClicked(_ sender: Any) {
+        
+        let signUpVC = SignUpViewController()
+        present(signUpVC, animated: true, completion: nil)
+        
+//        self.navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
 }

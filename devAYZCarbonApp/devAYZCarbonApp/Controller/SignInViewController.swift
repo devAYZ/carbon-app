@@ -17,7 +17,7 @@ class SignInViewController: UIViewController {
     lazy var pin = UITextView()
     lazy var pinCell = UITextField()
     lazy var signInByeInfo = UITextView()
-    lazy var setupNewAccount = UIButton()
+    lazy var setupNewAccount = UIButton(type: .system)
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,7 +9,7 @@ import UIKit
 class UserDetailsViewController: UIViewController {
     static let identifier = "UserDetailsViewController"
     
-    lazy var nextButton = UIButton()
+    lazy var nextButton = UIButton(type: .system)
     static var idCell = UITextView()
     lazy var id = UITextView()
     static var passwordCell = UITextView()

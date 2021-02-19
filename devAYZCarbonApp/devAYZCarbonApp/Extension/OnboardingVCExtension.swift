@@ -43,6 +43,7 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
         button.addTarget(self, action: #selector(signUpClicked(_:)), for: .touchUpInside)
         button.isPointerInteractionEnabled = true
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        button.setTitleColor(.white, for: .normal)
         self.view.addSubview(button)
         
         

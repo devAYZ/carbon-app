@@ -10,7 +10,7 @@ import UIKit
 class OnboardingViewController: UIViewController {
     
     public let slides: [SlideContents] = SlideContents.collection
-    lazy var button = UIButton()
+    lazy var button = UIButton(type: .system)
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
